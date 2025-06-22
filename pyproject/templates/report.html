@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Report</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="fade-in">
+  <div class="form-container">
+    <h2>Admin Feedback Report</h2>
+    <table>
+      <tr><th>Student</th><th>Subject</th><th>Rating</th><th>Comments</th></tr>
+      {% for fb in feedbacks %}
+      <tr>
+        <td>{{ fb.name }}</td>
+        <td>{{ fb.subject }}</td>
+        <td>{{ fb.rating }}</td>
+        <td>{{ fb.comments }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
